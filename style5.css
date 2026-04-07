@@ -1,0 +1,838 @@
+/* 前ページ共通 */
+body {
+    margin: 0;
+    padding: 0;
+
+}
+header {
+    height: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4em;
+    background: rgb(42, 75, 184);
+  
+}
+.logotype {
+    font-family: sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+@media screen  {
+        nav{display: inline;}    
+    }
+/* .menu{
+    display: flex;    */
+
+.menu-photo{
+    flex: 1;
+}
+.menu-text{
+    flex: 2;
+}
+.menu_box{
+         display: flex;
+        list-style-type: none;   
+        flex-direction: column; 
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: -600px 0 0 0;
+        padding: 0.6em 0;
+        text-align: center;
+        background-color: rgb(42, 75, 184);
+        box-shadow: 1px 0 6px rgba(0,0,0,.2);;
+        z-index: 1;
+        transition-duration: 0.5s;}    
+.red{
+    color: crimson;
+}
+.menu_item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em 0 1em;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 2.2em;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+  padding: 5px 12px;
+   
+}
+.menu_item:hover{
+        background-color: #AAA;
+    } 
+#menu_toggle {
+    opacity: 0;
+}
+#menu_toggle:checked ~ .menu_btn>span {
+    transform: rotate(45deg);
+}
+#menu_toggle:checked~.menu_btn>span::before {
+    top: 0;
+    transform: rotate(0);
+    background: #ffffff;
+}
+#menu_toggle:checked~.menu_btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background: #ffffff;
+}
+#menu_toggle:checked~.menu_box {
+    visibility: visible;
+    left: 0;
+    margin: 0;
+    /* ↑マージンなぜ必要？ */
+}
+ .menu_btn {
+    transition-duration: 0.25s;
+ 
+    display: flex;
+     position: relative; 
+    bottom: 2px;
+    font-weight: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;  
+}   
+.menu_btn span {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;    
+    
+ }  
+.menu_btn span::before {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    content:'';
+    top: -8px;
+    transition-duration: 0.25s;
+    }
+.menu_btn span::after{
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color:white;
+        content: '';
+        top: 8px;
+        transition-duration: 0.25;
+
+    }
+
+
+
+footer{
+    background-color: rgb(42, 75, 184);
+    display: flex;
+    justify-content: space-between;
+  
+    
+}
+.detail{
+    margin-left: 10%;
+    color: #e8e8e8;
+}
+.detail p{
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    margin: 10% 0%;
+}
+footer ul{
+    margin-right: 15%;
+    list-style-type: none;
+    display: flex;
+  
+}
+footer li{
+    margin: 8%;
+     color: #ffffff; 
+}
+.footer-items{
+    color: #ffffff;
+}
+
+
+/* ページオリジナル */
+img {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    opacity: 1;
+    background: bla;
+}
+
+.container,.logo{
+    opacity: 0;
+}
+.logo{
+    width: 50%;
+    position: absolute;
+    top: 0%;
+    left: 24%;
+    
+    animation: scaleup 1s forwards;
+}
+.blackmat{
+    position:absolute;
+    
+}
+.container{
+    animation: fadeIn 3s forwards;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+  30%{
+    opacity: 0;
+  }
+    100%{
+        opacity: 100;
+    }
+}
+@keyframes scaleup{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    100%{
+        opacity: 100;
+        transform: scale(1);
+    }
+}
+.topphotos{
+    position: relative;
+
+}
+.black{
+    position: absolute;
+}
+/* 共通 */
+h1{
+    font-size: 270%;
+}
+h2{
+}
+.undertitle{
+    /* background-color: #AAA; */
+    position: absolute;
+    margin-top: 40px;
+    font-weight: bold;
+}
+.maintitle{
+    /* background-color: aqua; */
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 0%;
+    font-style: ;
+    color: rgb(42, 75, 184);
+}
+.maintitle2{
+    /* background-color: aqua; */
+    font-size: 35px;
+    font-weight: bold;
+    padding-bottom: 0%;
+    font-style: ;
+    color: rgb(255, 255, 255);
+}
+
+.title1{
+    justify-content: center;
+    text-align: center;
+    margin-top: 10%;
+     display: block;
+    display: flex;
+   
+    position: relative;
+}
+.title2{
+    /* justify-content: center; */
+    text-align: center;
+    margin-top: 10%;
+     display: block;
+    display: flex;
+    padding: 10%;
+    justify-content: center;
+   
+    position: relative;
+}
+
+.btn{
+    width: 60%;
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgb(234, 68, 68);
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: #000000;
+    border-radius: 25px;
+    margin: 30px 0 0 0;
+}
+.btn2{
+    width: 60%;
+    font-size: 20px;
+    padding: 5px;
+    background-color: rgb(234, 68, 68);
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: #000000;
+    border-radius: 25px;
+    margin:  0 0 0 20%;
+}
+.btn:hover{
+    background-color: rgb(249, 140, 140);
+}
+.btn2:hover{
+    background-color: rgb(249, 140, 140);
+}
+.letter{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 25%;
+    left: 5px;
+    justify-content: center;
+    text-align: center;
+   
+}
+/* トップが以下のbody */
+.kakoi{
+    margin: 3% 20% 0 20%;
+    border: solid rgb(255, 17, 17);
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+.flyer{
+    width: 70%;
+    margin: 3% 30% 0% 15%;
+}
+.flyer:hover{
+    opacity: 0.7;
+}
+
+
+.maintext{
+    justify-content: center;
+    text-align: center;
+    margin: 0% 5% 0% 5%;
+}
+
+.sasikomi{
+    margin: 0% 0% 0% 0%;
+}
+
+
+.section-syoukai{
+    text-align: center;
+}
+.all-section{
+    width: 90%;
+    filter: drop-shadow(5px 5px 4px rgb(106, 137, 240));
+
+}
+.koko{
+    margin: 3%;
+    /* background-color: blue; */
+    position: relative;
+    overflow: hidden;
+    
+}
+/* 照明 */
+.syoumei::before,
+.syoumei::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.syoumei::before{
+    background-color:  rgb(14, 15, 21);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    content: "照明";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.syoumei::after{
+    content: "舞台照明やピンスポットで劇を演出します";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.syoumei:hover::before{
+    opacity: 0.7;
+}
+.syoumei:hover::after{
+    opacity: 1;
+}
+/* 音響 */
+.onkyou::before,
+.onkyou::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.onkyou::before{
+    background-color:  rgb(14, 15, 21);
+    width: 98%;
+    height: 90%;
+    overflow: hidden;
+    content: "音響";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.onkyou::after{
+    content: "音集め、音作り等を行い演出の幅を広げます";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.onkyou:hover::before{
+    opacity: 0.7;
+}
+.onkyou:hover::after{
+    opacity: 1;
+}
+/* 大道具*/
+.oodougu::before,
+.oodougu::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.oodougu::before{
+    background-color:  rgb(14, 15, 21);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    content: "大道具";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.oodougu::after{
+    content: "背景やスクリーンなどを作ります。";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.oodougu:hover::before{
+    opacity: 0.7;
+}
+.oodougu:hover::after{
+    opacity: 1;
+}
+/* 小道具 */
+.kodougu::before,
+.kodougu::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.kodougu::before{
+    background-color:  rgb(14, 15, 21);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    content: "小道具";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.kodougu::after{
+    content: "劇中に出てくる小道具作成や収集を行っています。";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.kodougu:hover::before{
+    opacity: 0.7;
+}
+.kodougu:hover::after{
+    opacity: 1;
+}
+/* 映像 */
+.eizou::before,
+.eizou::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.eizou::before{
+    background-color:  rgb(14, 15, 21);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    content: "映像";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.eizou::after{
+    content: "エンドロールや劇中映像、宣伝映像などを作っています。";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.eizou:hover::before{
+    opacity: 0.7;
+}
+.eizou:hover::after{
+    opacity: 1;
+}
+/* 広報 */
+.koho::before,
+.koho::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.koho::before{
+    background-color:  rgb(14, 15, 21);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    content: "広報";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.koho::after{
+    content: "宣伝用のパンフレットやフライヤーなどを作成しています。";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.koho:hover::before{
+    opacity: 0.7;
+}
+.koho:hover::after{
+    opacity: 1;
+}
+/* 衣装 */
+.isyou::before,
+.isyou::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.isyou::before{
+    background-color:  rgb(14, 15, 21);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    content: "衣装";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.isyou::after{
+    content: "キャラクターにあった衣装を集めます。";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.isyou:hover::before{
+    opacity: 0.7;
+}
+.isyou:hover::after{
+    opacity: 1;
+}
+/* 当日係 */
+.touzitu::before,
+.touzitu::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.touzitu::before{
+    background-color:  rgb(14, 15, 21);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    content: "当日";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.touzitu::after{
+    content: "公演の際に会場設営や受付などを行います";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.touzitu:hover::before{
+    opacity: 0.7;
+}
+.touzitu:hover::after{
+    opacity: 1;
+}
+/* 演舞 */
+.enbu::before,
+.enbu::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.enbu::before{
+    background-color:  rgb(14, 15, 21);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    content: "演舞";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.enbu::after{
+    content: "劇の演出や公演まで各セクションを取りまとめ指示を出します。";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.enbu:hover::before{
+    opacity: 0.7;
+}
+.enbu:hover::after{
+    opacity: 1;
+}
+/* キャスト */
+.cast::before,
+.cast::after{
+    content: "";
+    display: block;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    transition: .3s cubic-bezier(0.45, 0, 0.55, 1);
+    opacity: 0;
+    z-index: 1;
+}
+.cast::before{
+    background-color:  rgb(14, 15, 21);
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    content: "キャスト";
+    font-size: 175%;
+    display: flex;
+    text-align: center;
+    padding: 5%;
+    color: #ffffff;
+    top: 0;
+}
+.cast::after{
+    content: "日々の稽古で演技を磨き、キャラクターにあった演技をします";
+    color: #ffffff;
+    margin: 55% 5% 45%;
+  
+    
+
+}
+.cast:hover::before{
+    opacity: 0.7;
+}
+.cast:hover::after{
+    opacity: 1;
+}
+
+
+
+.koko1{
+    margin:4% 13%;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-pic1{
+    display: flex;
+    padding: 10PX;
+    justify-content: center;
+    margin-left: 11%;
+    margin-top: 3%;
+}
+.section-pic2{
+    display: flex;
+    padding: 10PX;
+    margin-left: 11%;
+    margin-top: -3%;
+
+}
+.section-pic3{
+    display: flex;
+    width: 75%;
+    margin-left: 18%;
+    margin-top: -3%;
+    
+}
+
+
+
+.about-us{
+    background-color: #e8e8e8;
+}
+.about{
+    background-color:rgb(42, 75, 184);
+    margin-top: 15%;
+    margin-right: 70%;
+}
+.maintext2{
+    display: flex;
+}
+.aboutphoto{
+    width: 30%;
+    height: 30%;
+    margin: 10%;
+    filter: drop-shadow(10px 10px 0 rgb(42, 75, 184));
+}
+.explanation{
+    margin: 10% 0% 20% 18%;
+
+}
+
+
+
+
+
+.history{
+    background-color: #e8e8e8;
+}
+.history-outline{
+    background-color:rgb(42, 75, 184);
+    margin-left: 70%;
+    margin-top: 7.5%;
+}
+.maintext3{
+    display: flex;
+    margin-bottom: 0x%;
+}
+.explanation2{
+    margin: 10% 0% 0% 0%;
+
+}
+.kohophoto{
+    width: 25%;
+    height: 25%;
+    margin: 3% 17%;
+    margin-bottom: 7.5%;
+}
+
+
+
